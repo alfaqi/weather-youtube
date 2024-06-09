@@ -73,11 +73,56 @@ export default function HomeScreen() {
           ) : null}
         </View>
 
-
-        <View>
-          <Text>
+        {/* Forecast Section */}
+        <View className="mx-4 mb-2 flex flex-1 justify-around">
+          {/* Location */}
+          <Text className="text-white text-center text-2xl font-bold">
             London,
+            <Text className="text-lg font-semibold text-gray-300">
+              United Kindom
+            </Text>
           </Text>
+          {/* Weather Image */}
+          <View className="flex-row justify-center">
+            <Image
+              source={require("../assets/images/partlycloudy.png")}
+              className="w-52 h-52"
+            />
+          </View>
+          {/* Degree Celuis */}
+          <View className="space-y-2">
+            <Text className="text-white text-center text-6xl font-bold ml-5">
+              23&#176;
+            </Text>
+            <Text className="text-white text-center text-xl tracking-widest">
+              Partly Cloudy
+            </Text>
+          </View>
+
+          {/* Other stats */}
+          <View className="flex-row justify-between mx-4">
+            <View className="flex-row space-x-2 items-center">
+              <Image
+                source={require("../assets/icons/wind.png")}
+                className="h-6 w-6"
+              />
+              <Text className="text-white font-semibold text-base">22km</Text>
+            </View>
+            <View className="flex-row space-x-2 items-center">
+              <Image
+                source={require("../assets/icons/wind.png")}
+                className="h-6 w-6"
+              />
+              <Text className="text-white font-semibold text-base">22km</Text>
+            </View>
+            <View className="flex-row space-x-2 items-center">
+              <Image
+                source={require("../assets/icons/wind.png")}
+                className="h-6 w-6"
+              />
+              <Text className="text-white font-semibold text-base">22km</Text>
+            </View>
+          </View>
         </View>
       </SafeAreaView>
     </View>
